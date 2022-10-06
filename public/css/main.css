@@ -1,0 +1,183 @@
+.homeMain{
+    background: white;
+    background-image: radial-gradient(black 1px, transparent 0);
+    background-size: 40px 40px;
+    background-position: -19px -19px;
+}
+
+.hidden{
+    display: none !important;
+}
+
+.buttonA{
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    padding: 1.5rem;
+    border-radius: 1rem;
+    background-color: rgb(255, 204, 0);
+    width: fit-content;
+    font-size: 2rem;
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+    margin: 0 auto;
+    text-transform: uppercase;
+}
+
+.homeHeader{
+    height: max-content;
+    text-align: center;
+    background-color: rgba(255, 204, 0, 0.873);
+    padding: 4rem 1rem;
+    border-bottom-left-radius:25%;
+    border-bottom-right-radius:25%;
+}
+
+.homeHeader h1{
+    margin-bottom: 1rem;
+    color: white;
+    font-size: 2rem;
+}
+
+.homeHero{
+    display: grid;
+    grid-template-areas: 
+    'title'
+    'image';
+    align-items: center;
+    width: 100%;
+    height: max-content;
+    gap: 10%;
+    margin-block: 8rem;
+}
+
+.homeHero h1{
+    grid-area: title;
+    background-color: aliceblue;
+    font-size: 2.5rem;
+    padding: 3rem;
+    color: rgb(50, 50, 50);
+    border-radius: 2rem 6rem 7rem 8rem;
+    text-align: center;
+    height: max-content;
+    width: 90%;
+    margin-inline: auto;
+}
+
+.homeHero img{
+    grid-area: image;
+    min-width: 20%;
+    max-width: 100%;
+    height: 100%;
+}
+
+.participateSection{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    height: max-content;
+    width: 90%;
+    margin-bottom: 5rem;
+    margin-inline: auto;
+}
+
+.participateSection ol{
+    list-style: none;
+    padding: 3rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: left;
+    margin-inline: auto;
+    color: white;
+    background-color: rgb(255, 204, 0);
+    border-radius: 2rem;
+    margin-bottom: 2rem;
+}
+
+.participateSection h1{
+    margin-bottom: 1rem;
+}
+
+.participateSection li{
+    margin-bottom: 0.5rem;
+}
+
+.participateSection input[type="submit"]{
+    cursor: pointer;
+    border-style: none;
+    margin-top: 2rem;
+    height: max-content;
+    padding: 1rem 2rem;
+    background-color: rgb(255, 230, 0);
+    color: white;
+    font-size: 2rem;
+    width: max-content;
+    margin-inline: auto;
+    border-radius: 1rem;
+    text-decoration: none;
+}
+
+.participateSection a:hover{
+    background-color: rgb(255, 208, 0);
+}
+
+.participateSection form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    min-width: 280px;
+    max-width: 400px;
+    padding: 2rem;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 1rem;
+    margin: 0 auto 2rem auto;
+    text-align: left;
+    font-size: 1.5rem;
+    gap: 0.5rem;
+}
+
+.participateSection form input{
+    margin-bottom: 1rem;
+}
+
+.participateSection form input,
+.participateSection form select{
+    font-size: 1.5rem;
+    border-radius: 0.5rem;
+    text-indent: 0.5rem;
+}
+
+/* Chrome, Safari, Edge, Opera */
+.participateSection form input::-webkit-outer-spin-button,
+.participateSection form input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+.participateSection form input[type=number] {
+  -moz-appearance: textfield;
+}
+
+footer{
+    background-color: black;
+    height: 150px;
+    color: white;
+    display: grid;
+    place-items: center;
+    text-align: center;
+}
+
+@media screen and (min-width: 768px){
+
+    .homeHeader{
+        border-bottom-left-radius:50%;
+        border-bottom-right-radius:50%;
+    }
+
+    .homeHero{
+        grid-template-areas: 'title image';
+    }
+}
